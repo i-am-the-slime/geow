@@ -72,5 +72,6 @@ libraryDependencies ++= Seq(
   "org.specs2" %% "specs2" % "2.4.11" % "test",
   "org.mockito" % "mockito-core" % "1.9.5" % "test",
   "org.mockito" % "mockito-all" % "1.9.5" % "test",
-  "junit" % "junit" % "4.11" % "test"
+  "junit" % "junit" % "4.11" % "test",
+  "org.openstreetmap.osmosis" % "osmosis-osm-binary" % "0.44.1"
 )

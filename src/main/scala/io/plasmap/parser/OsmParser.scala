@@ -1,6 +1,7 @@
 package io.plasmap.parser
 
 import java.io.FileInputStream
+import java.io.File
 import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream
 import io.plasmap.model.OsmObject
 import scala.io.Codec
@@ -23,7 +24,7 @@ object OsmParser {
       OsmXmlParser(source)
     }
     case pbf if fileName.endsWith(".pbf") => {
-      throw new Error(".pbf files are not yet supported. Please try .osm or .osm.bz2")
+      OsmPbfParser(new File(fileName))
     }
     case _ => {
       throw new Error("Unknown file type.")
